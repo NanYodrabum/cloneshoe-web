@@ -30,7 +30,7 @@ const ProductList = () => {
     const fetchProducts = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get('http://localhost:8001/api/product/show-product');
+        const response = await axios.get('http://localhost:8000/api/product/show-product');
         setProducts(response.data?.data || []);
         
         // Extract unique categories
@@ -50,7 +50,7 @@ const ProductList = () => {
   const deleteProduct = async (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
       try {
-        await axios.delete(`http://localhost:8001/api/product/delete-product/${id}`);
+        await axios.delete(`http://localhost:8000/api/product/delete-product/${id}`);
         setProducts(products.filter(product => product.id !== id));
         alert('Product deleted successfully');
       } catch (error) {

@@ -111,7 +111,7 @@ const OrderDetail = () => {
       try {
         // In a real app, you would call your API to update the order status
         // For example:
-        // await axios.put(`http://localhost:8001/api/order/update-status/${id}`, { status: newStatus });
+        // await axios.put(`http://localhost:8000/api/order/update-status/${id}`, { status: newStatus });
         
         // For now, we'll update the local state
         setOrder({ ...order, shipment_status: newStatus });

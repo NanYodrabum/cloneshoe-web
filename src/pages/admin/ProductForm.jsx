@@ -58,7 +58,7 @@ const ProductForm = () => {
       const fetchProduct = async () => {
         try {
           setIsLoading(true);
-          const response = await axios.get(`http://localhost:8001/api/product/show-product`);
+          const response = await axios.get(`http://localhost:8000/api/product/show-product`);
           const products = response.data?.data || [];
           const product = products.find(p => p.id === parseInt(id));
           
@@ -185,11 +185,11 @@ const ProductForm = () => {
       
       if (isEditMode) {
         // Update existing product
-        await axios.put(`http://localhost:8001/api/product/update-product/${id}`, productData);
+        await axios.put(`http://localhost:8000/api/product/update-product/${id}`, productData);
         alert('Product updated successfully');
       } else {
         // Create new product
-        await axios.post('http://localhost:8001/api/product/add-product', productData);
+        await axios.post('http://localhost:8000/api/product/add-product', productData);
         alert('Product added successfully');
       }
       

@@ -84,7 +84,7 @@ const OrderList = () => {
       try {
         // In a real app, you would call your API to update the order status
         // For example:
-        // await axios.put(`http://localhost:8001/api/order/update-status/${orderId}`, { status: newStatus });
+        // await axios.put(`http://localhost:8000/api/order/update-status/${orderId}`, { status: newStatus });
         
         // For now, we'll update the local state
         setOrders(orders.map(order => 

@@ -30,7 +30,7 @@ const Dashboard = () => {
         setIsLoading(true);
         
         // Fetch products data
-        const productsResponse = await axios.get('http://localhost:8001/api/product/show-product');
+        const productsResponse = await axios.get('http://localhost:8000/api/product/show-product');
         const products = productsResponse.data?.data || [];
         
         // For demo purposes, we'll fake the orders and revenue data
